@@ -4,4 +4,15 @@ block content
   h1(style="text-align:center;")= title
   p(style="text-align:center;") Welcome to #{title}
   p(style="text-align:center;") Thakellapati Sai Charan
-  button(type='button',class="btn btn-light, btn btn-outline-warning") Press Me
+  button(type='button',class="btn btn-light, btn btn-outline-warning",onclick="doBump()") Press Me
+  div(id='bump',style="text-align:center") Bump the count
+  img(src="logo.png")
+  script.
+    let count=0;
+    let bump=1;
+    function doBump(){
+    bump=bump+count;
+    document.getElementById('bump').innerHTML=bump;
+    bump++;
+    };
+  
